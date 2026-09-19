@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban Plate — Modern American Kitchen & Bar</title>
+  <meta name="description" content="Urban Plate is a modern American restaurant offering seasonal, locally sourced cuisine in an elegant yet inviting atmosphere. Reserve your table today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#hero" class="navbar__logo">
+        <span class="logo-icon">&#9733;</span>
+        <span class="logo-text">Urban<span class="logo-accent">Plate</span></span>
+      </a>
+      <nav class="navbar__links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#why-us" class="nav-link">Why Us</a>
+        <a href="#hours" class="nav-link">Hours</a>
+        <a href="#location" class="nav-link">Location</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <a href="#menu" class="navbar__cta btn btn--sm">View Menu</a>
+      <button class="navbar__burger" id="navBurger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV OVERLAY ===== -->
+  <div class="mobile-nav" id="mobileNav">
+    <nav class="mobile-nav__links">
+      <a href="#about" class="mobile-nav__link">About</a>
+      <a href="#menu" class="mobile-nav__link">Menu</a>
+      <a href="#gallery" class="mobile-nav__link">Gallery</a>
+      <a href="#why-us" class="mobile-nav__link">Why Us</a>
+      <a href="#hours" class="mobile-nav__link">Hours</a>
+      <a href="#location" class="mobile-nav__link">Location</a>
+      <a href="#contact" class="mobile-nav__link">Contact</a>
+      <a href="tel:+12125558420" class="btn btn--primary mobile-nav__cta">Call to Reserve</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="hero__tagline animate-on-scroll">Modern American Kitchen &amp; Bar</p>
+        <h1 class="hero__title animate-on-scroll">Urban Plate</h1>
+        <p class="hero__subtitle animate-on-scroll">Seasonal ingredients. Bold flavors. Crafted with intention.</p>
+        <div class="hero__actions animate-on-scroll">
+          <a href="#menu" class="btn btn--primary btn--lg">View Menu</a>
+          <a href="#contact" class="btn btn--outline btn--lg">Reserve a Table</a>
+        </div>
+      </div>
+      <div class="hero__scroll-indicator">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__images animate-on-scroll">
+          <div class="about__img about__img--main">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=750&fit=crop&q=80" alt="Elegant plated dish at Urban Plate" loading="lazy" />
+          </div>
+          <div class="about__img about__img--accent">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&h=500&fit=crop&q=80" alt="Chef preparing food in the kitchen" loading="lazy" />
+          </div>
+        </div>
+        <div class="about__text animate-on-scroll">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">Where Every Plate Tells a Story</h2>
+          <p>Founded in 2017, Urban Plate was born from a simple belief: great food starts with great ingredients. What began as a small neighborhood bistro on Elm Street has grown into one of the city's most beloved dining destinations.</p>
+          <p>Our Executive Chef, Marcus Rivera, brings over 18 years of culinary experience from kitchens across New York, San Francisco, and Barcelona. His approach is rooted in seasonality — every dish on our menu reflects what's freshest from local farms and purveyors we've partnered with for years.</p>
+          <p>We don't just serve meals. We craft experiences — whether it's a Tuesday night dinner with friends or a milestone celebration. Our warm, design-forward space was made to feel like an extension of your own home, just with better lighting and a considerably better wine list.</p>
+          <div class="about__stats">
+            <div class="stat">
+              <span class="stat__number">9</span>
+              <span class="stat__label">Years of Excellence</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">12</span>
+              <span class="stat__label">Local Farm Partners</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">50k+</span>
+              <span class="stat__label">Happy Guests</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MENU ===== -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-label">Our Menu</span>
+          <h2 class="section-title">Seasonal Favorites</h2>
+          <p class="section-desc">Our menu changes with the seasons. Here are some of our current standouts — crafted daily with ingredients from farms within 50 miles.</p>
+        </div>
+
+        <div class="menu__tabs animate-on-scroll">
+          <button class="menu__tab active" data-category="starters">Starters</button>
+          <button class="menu__tab" data-category="mains">Main Course</button>
+          <button class="menu__tab" data-category="desserts">Desserts</button>
+          <button class="menu__tab" data-category="drinks">Drinks</button>
+        </div>
+
+        <div class="menu__panels">
+          <!-- Starters -->
+          <div class="menu__panel active" data-panel="starters">
+            <div class="menu__grid animate-on-scroll">
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1541014741259-de529411b96a?w=400&h=300&fit=crop&q=80" alt="Burrata with heirloom tomatoes" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">Burrata & Heirloom Tomatoes</h3>
+                    <span class="menu-item__price">$18</span>
+                  </div>
+                  <p class="menu-item__desc">Creamy burrata, vine-ripened heirloom tomatoes, basil oil, aged balsamic, Maldon sea salt.</p>
+                  <span class="menu-item__tag">Vegetarian</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1599021456807-25db0f2b5339?w=400&h=300&fit=crop&q=80" alt="Tuna tartare" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">Yellowfin Tuna Tartare</h3>
+                    <span class="menu-item__price">$22</span>
+                  </div>
+                  <p class="menu-item__desc">Sushi-grade yellowfin tuna, avocado mousse, citrus ponzu, crispy wonton chips, sesame.</p>
+                  <span class="menu-item__tag">Chef's Pick</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=400&h=300&fit=crop&q=80" alt="French onion soup" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">French Onion Soup</h3>
+                    <span class="menu-item__price">$14</span>
+                  </div>
+                  <p class="menu-item__desc">Slow-caramelized sweet onions, rich beef broth, toasted baguette, melted Gruyère.</p>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1603073163308-9654c3fb70b5?w=400&h=300&fit=crop&q=80" alt="Crispy calamari" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">Crispy Calamari</h3>
+                    <span class="menu-item__price">$16</span>
+                  </div>
+                  <p class="menu-item__desc">Lightly dusted calamari rings, charred lemon aioli, Calabrian chili, fresh parsley.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mains -->
+          <div class="menu__panel" data-panel="mains">
+            <div class="menu__grid animate-on-scroll">
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1558030006-450675393462?w=400&h=300&fit=crop&q=80" alt="Pan-seared salmon" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">Pan-Seared Atlantic Salmon</h3>
+                    <span class="menu-item__price">$34</span>
+                  </div>
+                  <p class="menu-item__desc">Wild-caught salmon, roasted fennel, saffron risotto, lemon-dill beurre blanc.</p>
+                  <span class="menu-item__tag">Popular</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1546833998-877b37c2e5c6?w=400&h=300&fit=crop&q=80" alt="Grilled ribeye steak" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">12oz Prime Ribeye</h3>
+                    <span class="menu-item__price">$48</span>
+                  </div>
+                  <p class="menu-item__desc">USDA Prime dry-aged 28-day ribeye, truffle mashed potatoes, grilled asparagus, red wine jus.</p>
+                  <span class="menu-item__tag">Chef's Pick</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&h=300&fit=crop&q=80" alt="Wild mushroom risotto" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">Wild Mushroom Risotto</h3>
+                    <span class="menu-item__price">$26</span>
+                  </div>
+                  <p class="menu-item__desc">Arborio rice, porcini, chanterelle, shiitake mushrooms, Parmigiano-Reggiano, white truffle oil.</p>
+                  <span class="menu-item__tag">Vegetarian</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1432139509613-5c4255a1d764?w=400&h=300&fit=crop&q=80" alt="Roasted chicken" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">Herb-Roasted Half Chicken</h3>
+                    <span class="menu-item__price">$29</span>
+                  </div>
+                  <p class="menu-item__desc">Free-range chicken, herb butter, roasted root vegetables, natural jus, crispy skin.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desserts -->
+          <div class="menu__panel" data-panel="desserts">
+            <div class="menu__grid animate-on-scroll">
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop&q=80" alt="Crème brûlée" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">Classic Crème Brûlée</h3>
+                    <span class="menu-item__price">$13</span>
+                  </div>
+                  <p class="menu-item__desc">Tahitian vanilla bean custard, caramelized sugar crust, fresh berries.</p>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=300&fit=crop&q=80" alt="Chocolate lava cake" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">Molten Chocolate Lava Cake</h3>
+                    <span class="menu-item__price">$15</span>
+                  </div>
+                  <p class="menu-item__desc">Valrhona dark chocolate, molten center, vanilla bean gelato, cocoa nib crumble.</p>
+                  <span class="menu-item__tag">Popular</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop&q=80" alt="Tiramisu" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">House Tiramisu</h3>
+                    <span class="menu-item__price">$14</span>
+                  </div>
+                  <p class="menu-item__desc">Espresso-soaked ladyfingers, mascarpone cream, Dutch cocoa, Kahlúa.</p>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=300&fit=crop&q=80" alt="New York cheesecake" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">New York Cheesecake</h3>
+                    <span class="menu-item__price">$13</span>
+                  </div>
+                  <p class="menu-item__desc">Dense, creamy cheesecake, graham cracker crust, seasonal fruit compote, whipped cream.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drinks -->
+          <div class="menu__panel" data-panel="drinks">
+            <div class="menu__grid animate-on-scroll">
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop&q=80" alt="Signature cocktail" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">The Urban Old Fashioned</h3>
+                    <span class="menu-item__price">$17</span>
+                  </div>
+                  <p class="menu-item__desc">Woodford Reserve bourbon, demerara, house-made bitters, smoked orange peel.</p>
+                  <span class="menu-item__tag">Signature</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?w=400&h=300&fit=crop&q=80" alt="Wine glass" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">Sommelier's Wine Flight</h3>
+                    <span class="menu-item__price">$24</span>
+                  </div>
+                  <p class="menu-item__desc">Four curated pours from our rotating wine program — ask your server for today's selection.</p>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop&q=80" alt="Espresso martini" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">Espresso Martini</h3>
+                    <span class="menu-item__price">$16</span>
+                  </div>
+                  <p class="menu-item__desc">Ketel One vodka, fresh-pulled espresso, Kahlúa, vanilla, coffee bean garnish.</p>
+                  <span class="menu-item__tag">Popular</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item__img">
+                  <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400&h=300&fit=crop&q=80" alt="Fresh juice" loading="lazy" />
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h3 class="menu-item__name">Cold-Pressed Seasonal Juice</h3>
+                    <span class="menu-item__price">$9</span>
+                  </div>
+                  <p class="menu-item__desc">Rotating selection — current: watermelon, cucumber, mint, lime. Always fresh, never from concentrate.</p>
+                  <span class="menu-item__tag">Non-Alcoholic</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-label">Gallery</span>
+          <h2 class="section-title">A Taste Through the Lens</h2>
+          <p class="section-desc">From the plate to the ambiance — a glimpse into the Urban Plate experience.</p>
+        </div>
+        <div class="gallery__grid animate-on-scroll">
+          <div class="gallery__item gallery__item--tall">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=800&fit=crop&q=80" alt="Beautifully plated entrée" loading="lazy" />
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&q=80" alt="Restaurant interior with warm lighting" loading="lazy" />
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop&q=80" alt="Bar area with craft cocktails" loading="lazy" />
+          </div>
+          <div class="gallery__item gallery__item--tall">
+            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=600&h=800&fit=crop&q=80" alt="Artisan dessert close-up" loading="lazy" />
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&h=400&fit=crop&q=80" alt="Steak dish from above" loading="lazy" />
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600&h=400&fit=crop&q=80" alt="Outdoor patio dining" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="section why-us" id="why-us">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-label">Why Urban Plate</span>
+          <h2 class="section-title">What Sets Us Apart</h2>
+        </div>
+        <div class="why-us__grid">
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="feature-card__title">Farm-to-Table Sourcing</h3>
+            <p class="feature-card__desc">We partner with 12 local farms and purveyors to source the freshest seasonal ingredients. Our menu changes quarterly to reflect what's at peak flavor.</p>
+          </div>
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 4a2 2 0 1 1-2 2 2 2 0 0 1 2-2zm4 10H8a4 4 0 0 1 8 0z"/></svg>
+            </div>
+            <h3 class="feature-card__title">Award-Winning Chef</h3>
+            <p class="feature-card__desc">Chef Marcus Rivera has been recognized by the James Beard Foundation and brings an inventive, globally-influenced approach to every plate that leaves our kitchen.</p>
+          </div>
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="feature-card__title">Warm Hospitality</h3>
+            <p class="feature-card__desc">From the moment you walk in, our team is focused on making your experience personal and memorable. No pretense, no rush — just genuine care.</p>
+          </div>
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"/><path d="M3 8h2v10H3a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2z"/><line x1="6" y1="2" x2="6" y2="22"/><line x1="18" y1="2" x2="18" y2="22"/><line x1="6" y1="12" x2="18" y2="12"/></svg>
+            </div>
+            <h3 class="feature-card__title">Curated Wine & Cocktails</h3>
+            <p class="feature-card__desc">Our bar program features 120+ wines and a rotating craft cocktail menu designed to complement every dish. Our sommelier is always happy to guide your pairing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOURS ===== -->
+    <section class="section hours" id="hours">
+      <div class="hours__bg"></div>
+      <div class="container hours__content">
+        <div class="hours__text animate-on-scroll">
+          <span class="section-label section-label--light">Visit Us</span>
+          <h2 class="section-title section-title--light">Opening Hours</h2>
+          <p class="hours__note">We recommend reservations for parties of 4 or more, especially on weekends. Walk-ins are always welcome based on availability.</p>
+        </div>
+        <div class="hours__table animate-on-scroll">
+          <div class="hours__row">
+            <span class="hours__day">Monday</span>
+            <span class="hours__divider"></span>
+            <span class="hours__time">Closed</span>
+          </div>
+          <div class="hours__row">
+            <span class="hours__day">Tuesday – Thursday</span>
+            <span class="hours__divider"></span>
+            <span class="hours__time">11:30 AM – 10:00 PM</span>
+          </div>
+          <div class="hours__row">
+            <span class="hours__day">Friday – Saturday</span>
+            <span class="hours__divider"></span>
+            <span class="hours__time">11:30 AM – 11:30 PM</span>
+          </div>
+          <div class="hours__row">
+            <span class="hours__day">Sunday</span>
+            <span class="hours__divider"></span>
+            <span class="hours__time">10:00 AM – 9:00 PM</span>
+          </div>
+          <div class="hours__row hours__row--highlight">
+            <span class="hours__day">Sunday Brunch</span>
+            <span class="hours__divider"></span>
+            <span class="hours__time">10:00 AM – 2:30 PM</span>
+          </div>
+          <div class="hours__row">
+            <span class="hours__day">Happy Hour (Tue–Fri)</span>
+            <span class="hours__divider"></span>
+            <span class="hours__time">4:00 PM – 6:00 PM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LOCATION ===== -->
+    <section class="section location" id="location">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-label">Find Us</span>
+          <h2 class="section-title">Our Location</h2>
+        </div>
+        <div class="location__grid animate-on-scroll">
+          <div class="location__map">
+            <div class="location__map-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <p>247 West Elm Street, Suite 100<br/>New York, NY 10014</p>
+              <a href="https://maps.google.com/?q=247+West+Elm+Street+New+York+NY+10014" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Open in Google Maps</a>
+            </div>
+          </div>
+          <div class="location__details">
+            <div class="location__detail">
+              <h3>Address</h3>
+              <p>247 West Elm Street, Suite 100<br/>New York, NY 10014</p>
+            </div>
+            <div class="location__detail">
+              <h3>Getting Here</h3>
+              <p><strong>Subway:</strong> A/C/E to 14th St, walk 3 blocks west<br/><strong>Parking:</strong> Validated parking at Elm Street Garage (next door)<br/><strong>Ride share:</strong> Drop-off at 247 W Elm St</p>
+            </div>
+            <div class="location__detail">
+              <h3>Private Events</h3>
+              <p>Our private dining room seats up to 30 guests. Perfect for corporate dinners, rehearsal dinners, and celebrations. <a href="#contact">Inquire here</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-label">Get in Touch</span>
+          <h2 class="section-title">Contact Us</h2>
+          <p class="section-desc">Whether you have a question about our menu, want to make a reservation, or plan a private event — we'd love to hear from you.</p>
+        </div>
+        <div class="contact__grid animate-on-scroll">
+          <a href="tel:+12125558420" class="contact-card">
+            <div class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h3 class="contact-card__title">Call Us</h3>
+            <p class="contact-card__info">(212) 555-8420</p>
+            <span class="contact-card__action">Tap to call →</span>
+          </a>
+          <a href="mailto:hello@urbanplate.com" class="contact-card">
+            <div class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3 class="contact-card__title">Email Us</h3>
+            <p class="contact-card__info">hello@urbanplate.com</p>
+            <span class="contact-card__action">Send an email →</span>
+          </a>
+          <a href="https://wa.me/12125558420?text=Hi%2C%20I'd%20like%20to%20make%20a%20reservation%20at%20Urban%20Plate." target="_blank" rel="noopener noreferrer" class="contact-card contact-card--whatsapp">
+            <div class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            </div>
+            <h3 class="contact-card__title">WhatsApp</h3>
+            <p class="contact-card__info">Message us directly</p>
+            <span class="contact-card__action">Chat on WhatsApp →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#hero" class="navbar__logo">
+            <span class="logo-icon">&#9733;</span>
+            <span class="logo-text">Urban<span class="logo-accent">Plate</span></span>
+          </a>
+          <p class="footer__tagline">Modern American Kitchen &amp; Bar.<br/>Seasonal ingredients. Bold flavors.</p>
+          <div class="footer__social">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <h4>Navigate</h4>
+            <a href="#about">About Us</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer__col">
+            <h4>Visit</h4>
+            <a href="#hours">Opening Hours</a>
+            <a href="#location">Find Us</a>
+            <a href="https://maps.google.com/?q=247+West+Elm+Street+New+York+NY+10014" target="_blank" rel="noopener noreferrer">Get Directions</a>
+          </div>
+          <div class="footer__col">
+            <h4>Contact</h4>
+            <a href="tel:+12125558420">(212) 555-8420</a>
+            <a href="mailto:hello@urbanplate.com">hello@urbanplate.com</a>
+            <a href="https://wa.me/12125558420" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Urban Plate. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
