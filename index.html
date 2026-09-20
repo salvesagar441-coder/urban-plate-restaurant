@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Urban Plate — Modern American Kitchen & Bar</title>
   <meta name="description" content="Urban Plate is a modern American restaurant offering seasonal, locally sourced cuisine in an elegant yet inviting atmosphere. Reserve your table today." />
+  <meta name="theme-color" content="#1a1a1a" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <!-- ===== NAVBAR ===== -->
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
@@ -35,7 +38,7 @@
   </header>
 
   <!-- ===== MOBILE NAV OVERLAY ===== -->
-  <div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation" aria-modal="true">
     <nav class="mobile-nav__links">
       <a href="#about" class="mobile-nav__link">About</a>
       <a href="#menu" class="mobile-nav__link">Menu</a>
@@ -48,9 +51,9 @@
     </nav>
   </div>
 
-  <main>
+  <main id="main-content">
     <!-- ===== HERO ===== -->
-    <section class="hero" id="hero">
+    <section class="hero" id="hero" aria-label="Welcome to Urban Plate">
       <div class="hero__overlay"></div>
       <div class="container hero__content">
         <p class="hero__tagline animate-on-scroll">Modern American Kitchen &amp; Bar</p>
@@ -111,16 +114,16 @@
           <p class="section-desc">Our menu changes with the seasons. Here are some of our current standouts — crafted daily with ingredients from farms within 50 miles.</p>
         </div>
 
-        <div class="menu__tabs animate-on-scroll">
-          <button class="menu__tab active" data-category="starters">Starters</button>
-          <button class="menu__tab" data-category="mains">Main Course</button>
-          <button class="menu__tab" data-category="desserts">Desserts</button>
-          <button class="menu__tab" data-category="drinks">Drinks</button>
+        <div class="menu__tabs animate-on-scroll" role="tablist" aria-label="Menu categories">
+          <button class="menu__tab active" data-category="starters" role="tab" aria-selected="true" aria-controls="panel-starters" id="tab-starters">Starters</button>
+          <button class="menu__tab" data-category="mains" role="tab" aria-selected="false" aria-controls="panel-mains" id="tab-mains">Main Course</button>
+          <button class="menu__tab" data-category="desserts" role="tab" aria-selected="false" aria-controls="panel-desserts" id="tab-desserts">Desserts</button>
+          <button class="menu__tab" data-category="drinks" role="tab" aria-selected="false" aria-controls="panel-drinks" id="tab-drinks">Drinks</button>
         </div>
 
         <div class="menu__panels">
           <!-- Starters -->
-          <div class="menu__panel active" data-panel="starters">
+          <div class="menu__panel active" data-panel="starters" role="tabpanel" id="panel-starters" aria-labelledby="tab-starters">
             <div class="menu__grid animate-on-scroll">
               <div class="menu-item">
                 <div class="menu-item__img">
@@ -176,7 +179,7 @@
           </div>
 
           <!-- Mains -->
-          <div class="menu__panel" data-panel="mains">
+          <div class="menu__panel" data-panel="mains" role="tabpanel" id="panel-mains" aria-labelledby="tab-mains">
             <div class="menu__grid animate-on-scroll">
               <div class="menu-item">
                 <div class="menu-item__img">
@@ -233,7 +236,7 @@
           </div>
 
           <!-- Desserts -->
-          <div class="menu__panel" data-panel="desserts">
+          <div class="menu__panel" data-panel="desserts" role="tabpanel" id="panel-desserts" aria-labelledby="tab-desserts">
             <div class="menu__grid animate-on-scroll">
               <div class="menu-item">
                 <div class="menu-item__img">
@@ -288,7 +291,7 @@
           </div>
 
           <!-- Drinks -->
-          <div class="menu__panel" data-panel="drinks">
+          <div class="menu__panel" data-panel="drinks" role="tabpanel" id="panel-drinks" aria-labelledby="tab-drinks">
             <div class="menu__grid animate-on-scroll">
               <div class="menu-item">
                 <div class="menu-item__img">
@@ -580,9 +583,12 @@
       <div class="footer__bottom">
         <p>&copy; 2026 Urban Plate. All rights reserved.</p>
         <div class="footer__bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <a href="javascript:void(0)">Privacy Policy</a>
+          <a href="javascript:void(0)">Terms of Service</a>
         </div>
+      </div>
+      <div class="demo-banner" aria-label="Demo disclaimer">
+        <p>&#9888; This is a <strong>demo restaurant website</strong> built for portfolio purposes. The business name, address, phone number, and menu items are fictional.</p>
       </div>
     </div>
   </footer>

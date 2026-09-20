@@ -59,11 +59,15 @@
   // ---- Menu tabs ----
   menuTabs.forEach(function (tab) {
     tab.addEventListener('click', function () {
-      const category = this.dataset.category;
+      var category = this.dataset.category;
 
-      // Update active tab
-      menuTabs.forEach(function (t) { t.classList.remove('active'); });
+      // Update active tab + ARIA
+      menuTabs.forEach(function (t) {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
       this.classList.add('active');
+      this.setAttribute('aria-selected', 'true');
 
       // Show corresponding panel
       menuPanels.forEach(function (panel) {
@@ -71,6 +75,29 @@
       });
     });
   });
+
+  // Keyboard navigation for tabs (Left/Right arrow keys)
+  var tabList = document.querySelector('[role="tablist"]');
+  if (tabList) {
+    tabList.addEventListener('keydown', function (e) {
+      var tabs = Array.from(menuTabs);
+      var currentIndex = tabs.indexOf(document.activeElement);
+      if (currentIndex < 0) return;
+
+      var newIndex;
+      if (e.key === 'ArrowRight') {
+        newIndex = (currentIndex + 1) % tabs.length;
+      } else if (e.key === 'ArrowLeft') {
+        newIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+      } else {
+        return;
+      }
+
+      e.preventDefault();
+      tabs[newIndex].focus();
+      tabs[newIndex].click();
+    });
+  }
 
   // ---- Scroll-triggered animations ----
   const animatedElements = document.querySelectorAll('.animate-on-scroll');
@@ -118,21 +145,27 @@
   highlightActiveLink();
 
   // ---- Smooth scroll for all anchor links (fallback for older browsers) ----
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
+      var targetId = this.getAttribute('href');
       if (targetId === '#') return;
 
-      const target = document.querySelector(targetId);
+      var target = document.querySelector(targetId);
       if (!target) return;
 
       e.preventDefault();
-      const navbarHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--navbar-h')) || 72;
+      var navbarHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--navbar-h')) || 72;
 
       window.scrollTo({
         top: target.offsetTop - navbarHeight,
-        behavior: 'smooth',
+        behavior: prefersReducedMotion.matches ? 'auto' : 'smooth',
       });
+
+      // Move focus to target for accessibility
+      target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
     });
   });
 })();
